@@ -3,4 +3,4 @@ require_relative '../lib/car.rb'
 
 junker = Car.new("AMC", "Pacer Sundowner", 1975, 3599)
 
-junker.current_value
+puts "Without mileage, #{junker.make_year} #{junker.make} #{junker.model} is valued at $#{junker.current_value}."
