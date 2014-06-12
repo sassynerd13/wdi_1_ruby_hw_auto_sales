@@ -12,11 +12,13 @@ require 'date'
 class Car
   attr_reader :make, :model, :make_year, :origin_price
 
+#origin_price should be input as rounded up integer dollar val
   def initialize(make, model, make_year, origin_price)
     @make = make
     @model = model
     @make_year = make_year
     @origin_price = origin_price
+    @current_value = origin_price - standard_deprec
   end
 
   def car_age
@@ -25,7 +27,7 @@ class Car
   end
 
   def standard_deprec
-    (age*0.05)
+    (car_age*0.05)
   end
 
 end
